@@ -1,0 +1,43 @@
+{
+  "name": "Renzoku",
+  "version": "0.0.0",
+  "description": "",
+  "main": "./src/main.ts",
+  "type": "module",
+  "scripts": {
+    "start:local": "node -r dotenv/config --no-warnings --loader ts-node/esm ./src/main.ts",
+    "start": "node --no-warnings --loader ts-node/esm ./src/main.ts",
+    "version": "pnpm run changes:log && conventional-changelog -p eslint -i CHANGELOG.md -s && git add CHANGELOG.md",
+    "changes:log": "conventional-changelog -p eslint -o CHANGES.md",
+    "git": "GIT_SSH_COMMAND='ssh -i ./ssh-dev-keys/bot -o IdentitiesOnly=yes' git",
+    "build:image": "./docker/build-image.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.15.3",
+    "commitizen": "^4.3.0",
+    "conventional-changelog-cli": "^2.2.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-ava": "^14.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "octokit": "^2.0.14",
+    "zod": "^3.21.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+# Ignore all top level files and folders
+/*
+
+# Vscode
+!.vscode/
+
+# Husky
+!.husky/
+
+# MD
+!CHANGELOG.md
+!README.md
+!LICENSE.md
+
+!docker/
+!src/
+!.dockerignore
+!.editorconfig
+!.eslintrc.cjs
+!.gitignore
+!.gitattributes
+!.prettierrc
+!package.json
+!pnpm-lock.yaml
+!changelog.config.cjs
+!.drone.yml
+!ava.config.js
+
+# Typescript
+!tsconfig.json
+
+# Templates
+!.env.template
+!secret.json.template
